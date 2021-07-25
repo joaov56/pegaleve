@@ -1,0 +1,62 @@
+Database- 3 niveis de abstração para a comunicação
+Query normal
+Query builder
+ORM
+
+Conceitos do Docker:
+    Imagem- Postgres, MySQL podem ser imagens que são coisas que podem ser colocados em um container
+    Container- Instancia de uma imagem (3 postgres rodando por exemplo)
+    Docker Registry (Docker Hub)- Onde fica nossas próprias imagens
+    Docker File- A receita para a criação da nossa receita no Docker 
+
+MIGRATIONS:
+    1a semana: Agendamentos
+    2a semana: Usuários
+    (Novo DEV)3a semana: Edição Agendamentos
+    4a semana: Compras
+
+    Manter o banco de dados igual em todas as maquinas
+    Controle de versão do Banco de Dados
+    SÓ PODE ALTERAR UMA MIGRATION SE ELA AINDA NÃO FOI PARA UM AMBIENTE DE PRODUÇÃO OU CONTROLE DE VERSÃO
+    CRIAR NOVA MIGRATION PARA CASO ELA JÁ ESTIVER EM ALGUM LUGAR
+
+
+ENTITYS:
+    Quando criamos um entity o método constructor é criado automáticamente
+
+Toda vez que criamos uma funcao assincrona o retorno dela vai ser uma promisse 
+
+Relacionamentos :
+    Um para Um
+    Um para Muitos
+    Muitos para Muitos
+
+KISS:
+    Keep It Simple & Stupid
+
+AUTENTICAÇÃO:
+  JWT:
+    JSON WEB TOKEN
+    É A FORMA DE FAZER AUTENTICAÇÃO EM APIS REST
+    FAZ UMA CONSULTA NA DATABASE E GERA UM TOKEN JWT
+    O que vem no TOKEN:
+      Headers:
+        Tipo de Token 
+      Payload:
+        Dados adicionais do usuário (ID, Nome e etc. NUNCA DADOS SENSÍVEIS)
+      Assinatura:
+        Garantia de que o Token não foi alterado por outro usuário
+  
+  O Token é enviado pelo header usando o prefixo Bearer
+
+Tudo que é enviado pelo request e response fica disponível para os midlewares subsequentes
+
+No typescript podemos usar hacks por exemplo:
+  Para alterar uma declaração de tipagem da própria biblioteca pode criar uma pasta @types com um arquivo #biblioteca.d.ts e colocar ali o que queremos mudar
+  Para declarar uma tipagem de uma variável após definir o valor dela podemos usar o AS, const encoded= object      const {encoded_value}= encoded as INTERFACE
+  
+  Exception Handling:
+    Classes de erro
+
+  Global Exception Handling:
+    Captura TODOS os erros da aplicação
